@@ -24,7 +24,7 @@ import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
+import org.eclipse.jetty.util.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 

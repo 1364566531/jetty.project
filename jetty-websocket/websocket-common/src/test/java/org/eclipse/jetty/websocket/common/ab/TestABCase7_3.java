@@ -22,7 +22,7 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
 
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
+import org.eclipse.jetty.util.StandardCharsets;
 import java.util.Arrays;
 
 import org.eclipse.jetty.util.BufferUtil;

@@ -21,7 +21,7 @@ package org.eclipse.jetty.websocket.common.message;
 import static org.hamcrest.Matchers.*;
 
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
+import org.eclipse.jetty.util.StandardCharsets;
 
 import org.eclipse.jetty.util.BufferUtil;
 import org.junit.Assert;

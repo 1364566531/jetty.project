@@ -21,11 +21,12 @@ package org.eclipse.jetty.websocket.client;
 import java.net.CookieStore;
 import java.net.HttpCookie;
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
+import org.eclipse.jetty.util.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ThreadLocalRandom;
@@ -195,7 +196,11 @@ public class ClientUpgradeRequest extends UpgradeRequest
     private final String genRandomKey()
     {
         byte[] bytes = new byte[16];
-        ThreadLocalRandom.current().nextBytes(bytes);
+        try {
+            ThreadLocalRandom.current().nextBytes(bytes);
+        } catch (NoClassDefFoundError e) {
+            new Random().nextBytes(bytes);
+        }
         return new String(B64Code.encode(bytes));
     }
 

@@ -20,7 +20,7 @@ package org.eclipse.jetty.websocket.common.events.annotated;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Objects;
+import org.eclipse.jetty.util.Objects;
 
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;

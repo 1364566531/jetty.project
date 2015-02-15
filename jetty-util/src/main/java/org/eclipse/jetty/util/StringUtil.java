@@ -20,7 +20,6 @@ package org.eclipse.jetty.util;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
@@ -46,7 +45,17 @@ public class StringUtil
     
     /** @deprecated use {@link System#lineSeparator()} instead */
     @Deprecated
-    public static final String __LINE_SEPARATOR = System.lineSeparator();
+    public static final String __LINE_SEPARATOR;
+
+    static {
+        String ls;
+        try {
+            ls = System.lineSeparator();
+        } catch (NoSuchMethodError e) {
+            ls = "\n";
+        }
+        __LINE_SEPARATOR = ls;
+    }
        
     public static final String __ISO_8859_1="ISO-8859-1";
     public final static String __UTF8="UTF-8";

@@ -20,7 +20,7 @@ package org.eclipse.jetty.websocket.client.examples;
 
 import java.net.InetSocketAddress;
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
+import org.eclipse.jetty.util.StandardCharsets;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;

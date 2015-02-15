@@ -21,7 +21,6 @@ package org.eclipse.jetty.util;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 
 /**
  * ReadLineInputStream

@@ -18,7 +18,7 @@
 
 package org.eclipse.jetty.websocket.common;
 
-import java.nio.charset.StandardCharsets;
+import org.eclipse.jetty.util.StandardCharsets;
 import java.security.MessageDigest;
 
 import org.eclipse.jetty.util.B64Code;

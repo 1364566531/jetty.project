@@ -19,7 +19,6 @@
 package org.eclipse.jetty.util;
 
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
 
 
 /* ------------------------------------------------------------ */

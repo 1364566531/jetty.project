@@ -77,7 +77,11 @@ public class ScheduledExecutorScheduler extends AbstractLifeCycle implements Sch
                 return thread;
             }
         });
-        scheduler.setRemoveOnCancelPolicy(true);
+        try {
+            scheduler.setRemoveOnCancelPolicy(true);
+        } catch (IllegalAccessError e) {
+            // Ignore, method only implemented in Java 7 / Android 5.0
+        }
         super.doStart();
     }
 

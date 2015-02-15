@@ -1375,7 +1375,16 @@ public class SslContextFactory extends AbstractLifeCycle
     public void customize(SSLEngine sslEngine)
     {
         SSLParameters sslParams = sslEngine.getSSLParameters();
-        sslParams.setEndpointIdentificationAlgorithm(_endpointIdentificationAlgorithm);
+        try {
+            sslParams.setEndpointIdentificationAlgorithm(_endpointIdentificationAlgorithm);
+        } catch (NoSuchMethodError e) {
+            // Method unavailable before Java 1.7, unavailable in Android
+            if(_endpointIdentificationAlgorithm != null) {
+                // This is security relevant: throw!
+                throw new RuntimeException("Could not set endpointIdentificationAlgorithm to " +
+                        _endpointIdentificationAlgorithm, e);
+            }
+        }
         sslEngine.setSSLParameters(sslParams);
 
         if (getWantClientAuth())

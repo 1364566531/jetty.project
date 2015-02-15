@@ -21,7 +21,7 @@ package org.eclipse.jetty.websocket.common.message;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
+import org.eclipse.jetty.util.StandardCharsets;
 
 /**
  * Support class for reading a (single) WebSocket TEXT message via a Reader.

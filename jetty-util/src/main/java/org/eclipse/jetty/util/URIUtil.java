@@ -19,7 +19,6 @@
 package org.eclipse.jetty.util;
 
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 
 
 

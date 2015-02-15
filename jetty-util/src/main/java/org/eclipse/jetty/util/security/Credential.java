@@ -19,7 +19,7 @@
 package org.eclipse.jetty.util.security;
 
 import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
+import org.eclipse.jetty.util.StandardCharsets;
 import java.security.MessageDigest;
 
 import org.eclipse.jetty.util.TypeUtil;
