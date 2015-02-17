@@ -42,6 +42,7 @@ import org.eclipse.jetty.websocket.common.test.IncomingFramesCapture;
 import org.eclipse.jetty.websocket.common.test.LeakTrackingBufferPool;
 import org.eclipse.jetty.websocket.common.test.OutgoingFramesCapture;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -52,6 +53,7 @@ import static org.hamcrest.Matchers.is;
  * <p/>
  * See: http://tools.ietf.org/html/draft-ietf-hybi-permessage-compression-15
  */
+@Ignore // deflate extensions deactivated for Android
 public class PerMessageDeflateExtensionTest extends AbstractExtensionTest
 {
     @Rule

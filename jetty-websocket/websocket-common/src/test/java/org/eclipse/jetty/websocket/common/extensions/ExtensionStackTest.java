@@ -33,6 +33,7 @@ import org.eclipse.jetty.websocket.api.extensions.ExtensionFactory;
 import org.eclipse.jetty.websocket.common.extensions.identity.IdentityExtension;
 import org.eclipse.jetty.websocket.common.test.LeakTrackingBufferPool;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -173,6 +174,7 @@ public class ExtensionStackTest
     }
     
     @Test
+    @Ignore // deflate extensions deactivated for Android
     public void testNegotiateChrome32()
     {
         ExtensionStack stack = createExtensionStack();

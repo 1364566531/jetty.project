@@ -54,6 +54,7 @@ import org.eclipse.jetty.websocket.common.test.LeakTrackingBufferPool;
 import org.eclipse.jetty.websocket.common.test.OutgoingNetworkBytesCapture;
 import org.eclipse.jetty.websocket.common.test.UnitParser;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -61,6 +62,7 @@ import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.is;
 
+@Ignore // deflate extensions deactivated for Android
 public class DeflateFrameExtensionTest extends AbstractExtensionTest
 {
     @Rule
