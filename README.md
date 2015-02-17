@@ -8,3 +8,15 @@ WebSockets Secure (wss) was tested to work on Android 5.0. Jetty 8 could not est
 Keep in mind that this is a somewhat experimental set of patches. We use it in production apps, but that does not mean it's going to work for you.
 
 Please use at your own risk and provide feedback.
+
+API Documentation
+-----------------
+[Jetty Websocket API](http://www.eclipse.org/jetty/documentation/9.2.7.v20150116/websocket-jetty.html)
+
+ProGuard configuration
+----------------------
+
+```
+-keep public class * implements org.eclipse.jetty.websocket.api.extensions.Extension;
+-dontwarn org.eclipse.jetty.**
+```
