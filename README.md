@@ -13,6 +13,20 @@ API Documentation
 -----------------
 [Jetty Websocket API](http://www.eclipse.org/jetty/documentation/9.2.7.v20150116/websocket-jetty.html)
 
+Install and use patched modules
+-------------------------------
+The following modules were patched:
+
+ * jetty-util
+ * jetty-websocket/websocket-common
+ * jetty-websocket/websocket-client
+
+Install or deploy those modules (their artifact ids have an "-android" postfix) using Maven. Now, you're good to use websocket-client-android in your Android project. Put a dependency in your Gradle build:
+
+```
+compile 'org.eclipse.jetty.websocket:websocket-client-android:9.2.8-SNAPSHOT'
+```
+
 ProGuard configuration
 ----------------------
 
